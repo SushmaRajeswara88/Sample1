@@ -1,0 +1,217 @@
+:root {
+    --primary-color: #00543D;
+    --secondary-color: #ffc20d;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#header {
+    width: 490px;
+    height: 50px;
+    background-color: var(--primary-color);
+}
+.container {
+    width: 490px;
+    height: 490px;
+    background: #c4c4c4;
+    position: fixed;
+    bottom: 100px;
+    right: 0;
+}
+
+.main-div {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #f4f4f4;
+    background: #ffffff;
+    padding: 40px;
+    overflow: auto;
+    margin: auto;
+}
+.main-img {
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    bottom: 09px;
+    right: 0;
+    animation-name: showImg;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+}
+@keyframes showImg {
+    from {right: -100px;}
+    to  {right:0}
+}
+img {
+    border-radius: 50%;
+}
+#img-clickable {
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+.main-options {
+    padding: 20px;
+    background: #f5f5f5;
+    border-radius: 20px;
+}
+
+input {
+    width: 490px;
+    height: 50px;
+    font-size: 16px;
+    border: 1px solid #f4f4f4;
+    border-top: 1px solid #333;
+}
+
+.user-msg-div {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.user-msg {
+    min-width: 90px;
+    display: inline-block;
+    height: 45px;
+    padding: 15px;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.place-order, .check-order, .order-issues {
+    display: block;
+    border: 1px solid black;
+    border-radius:24px;
+    background-color: #fff;
+    height: 45px;
+    width: 75%;
+    padding: 10px;
+    cursor: pointer;
+    margin: auto;
+    font-size: 18px;
+    transition-duration: 0.4s;
+} 
+.place-order:focus, .check-order:focus, .order-issues:focus, #option1:focus, #option-store:focus {
+    outline: none;
+}
+button:hover {
+    background: rgb(58, 71, 78);
+    color: #fff;
+}
+
+#order-message, #order-status {
+    background: var(--secondary-color);
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 10px;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#option1, #option-store {
+    display: block;
+    border: 1px solid black;
+    border-radius: 24px;
+    background-color: #fff;
+    height: 45px;
+    width: 75%;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    margin: auto;
+    transition-duration: 0.4s;
+}
+#option1:hover {
+    background: rgb(58, 71, 78);
+    color: #fff;
+}
+#option-store:hover {
+    background: rgb(58, 71, 78);
+    color: #fff;
+}
+
+.close {
+    margin-top: 22px;
+    cursor: pointer;
+    position: absolute;
+    right: 2%;
+    transform: translate(0%, -50%);
+    color: #fff;
+  }
+  
+.close:hover {background: #bbb;}
+  
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    font-size: 14px;
+    bottom: 107px;
+    right: 3px;
+  }
+  
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+  }
+  
+.main-img:hover .tooltiptext {
+    visibility: visible;
+  }
+
+#order-options, .store-details {
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 20px;
+}
+.store-details {
+    animation-name: showDetails;
+    animation-duration: 2s;
+}
+@keyframes showDetails {
+    from {margin-left: 100px;}
+    to  {margin-left:0}
+}
+
+.order-container, .store-container {
+    display: none;
+}
+
+#logo {
+    font-size: 54px;
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+    height: 100px;
+}
+.sub {
+    color: var(--secondary-color);
+}
+.way {
+    color: var(--primary-color);
+    margin-left: -16px;
+}
+.main-text {
+    font-size: 22px;
+}
